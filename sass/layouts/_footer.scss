@@ -1,0 +1,69 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footer-color;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__thumb {
+  margin-right: 70px;
+}
+
+.adress__list {
+  @extend %list;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__link {
+  display: block;
+  margin-bottom: 9px;
+  @extend %link;
+  line-height: 1.71;
+  color: $additional-color;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--change-color {
+    color: $background-color;
+  }
+}
+
+.socials__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: $main-font-size;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $background-color;
+}
+.socials__list {
+  display: flex;
+  gap: 10px;
+  @extend %list;
+}
+.socials__link {
+  @include centeredFlex(flex, center, center);
+  @extend %link;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $background-color;
+  background-color: $icon-footer-background;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    color: $background-color;
+    background-color: $accent-color;
+  }
+}
+.socials__icon {
+  @extend %icon;
+}

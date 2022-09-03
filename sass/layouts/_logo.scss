@@ -1,0 +1,28 @@
+.logo {
+  @extend %link;
+  display: block;
+  font-family: $second-font-family;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.logo__first-word {
+  color: $accent-color;
+}
+
+.logo__second-word {
+  color: $logo-color;
+  &--change-color {
+    color: $background-color;
+  }
+}
+
+.header__logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+}

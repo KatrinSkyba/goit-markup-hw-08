@@ -1,0 +1,28 @@
+.gallery {
+  padding-top: 0;
+}
+
+.gallery-list {
+  display: flex;
+  gap: 30px;
+  @extend %list;
+
+  &__thumb-image {
+    position: relative;
+  }
+
+  &__over-text {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $third-text-color;
+  }
+}

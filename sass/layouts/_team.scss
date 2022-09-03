@@ -1,0 +1,94 @@
+.team {
+  background-color: $additional-background-color;
+}
+
+.team__title {
+  margin-bottom: 30px;
+  @extend %main-title-mobile;
+
+  @include desktop {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.team-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-list__item {
+  width: 100%;
+  background: $background-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team-list__description {
+  padding: 30px 0 24px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
+}
+
+.team-list__title {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  color: $main-text-color;
+}
+
+.team-list__text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+.team-contacts {
+  @include centeredFlex(flex, center, center);
+  @extend %list;
+  gap: 10px;
+}
+.team-contacts__link {
+  @include centeredFlex(flex, center, center);
+  @extend %link;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $icon-color;
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $background-color;
+  }
+}
+
+.team-contacts__icon {
+  @extend %icon;
+}

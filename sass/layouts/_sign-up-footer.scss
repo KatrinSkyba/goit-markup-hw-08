@@ -1,0 +1,62 @@
+.sign-up {
+  margin-left: auto;
+  .sign-up__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $background-color;
+    margin-bottom: 20px;
+  }
+}
+
+.form {
+  display: flex;
+}
+.form__input {
+  padding: 11px;
+  width: 358px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  @extend %transition;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.submit-button {
+  @include centeredFlex(flex, center, center);
+  width: 200px;
+  height: 50px;
+  padding: 10px 10px 10px 28px;
+  margin-left: 12px;
+  font-family: inherit;
+  color: $third-text-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: $accent-color;
+  box-shadow: $box-button-shadow;
+  transform: scale(1);
+  @extend %button;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+
+.submit-button__icon {
+  @extend %icon;
+  margin-left: 10px;
+}
