@@ -14,12 +14,25 @@
 }
 
 .modal {
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+    height: 609px;
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    width: 450px;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
@@ -53,8 +66,8 @@
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  color: $main-text-color;
   margin-bottom: 12px;
+  margin-bottom: 31px;
 }
 
 .form-field {
@@ -139,13 +152,24 @@
 .form-check {
   position: relative;
   @include centeredFlex(flex, center, center);
-  font-size: 14px;
-  line-height: 1.71;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+
   color: $secondary-text-color;
   margin-bottom: 30px;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
-.form-mailimg-features {
+.form-mailing {
+  display: flex;
+  align-items: center;
+}
+.form-mailing-features {
   color: $accent-color;
   outline-color: $accent-color;
 }
@@ -153,8 +177,8 @@
 .form-square-icon {
   position: absolute;
   display: flex;
-  top: 0;
-  left: 32px;
+  top: -5px;
+  left: 26px;
   transform: translate(-25px, 4px);
   width: 16px;
   height: 15px;

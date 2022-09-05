@@ -37,6 +37,11 @@
   border-radius: 50%;
   outline: none;
   color: $main-text-color;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .mobile-menu__list {
@@ -101,7 +106,7 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: $secondary-text-color;
+  color: #2196f3;
 }
 
 .mobile-soc-links_item:not(:last-child) {

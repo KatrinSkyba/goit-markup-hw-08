@@ -136,14 +136,34 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    max-width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close-button {
@@ -173,8 +193,8 @@ address {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  color: #212121;
   margin-bottom: 12px;
+  margin-bottom: 31px;
 }
 
 .form-field {
@@ -270,13 +290,25 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .form-check {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
-.form-mailimg-features {
+.form-mailing {
+  display: flex;
+  align-items: center;
+}
+
+.form-mailing-features {
   color: #2196f3;
   outline-color: #2196f3;
 }
@@ -284,8 +316,8 @@ address {
 .form-square-icon {
   position: absolute;
   display: flex;
-  top: 0;
-  left: 32px;
+  top: -5px;
+  left: 26px;
   transform: translate(-25px, 4px);
   width: 16px;
   height: 15px;
@@ -450,6 +482,9 @@ address {
   outline: none;
   color: #212121;
 }
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: #2196f3;
+}
 
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
@@ -500,7 +535,7 @@ address {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: #2196f3;
 }
 
 .mobile-soc-links_item:not(:last-child) {
