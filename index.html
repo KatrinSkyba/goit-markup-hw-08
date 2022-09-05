@@ -21,14 +21,16 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <!-- HEADER -->
+
+    <header class="header">
       <div class="header__container container">
         <nav class="header__nav">
           <a href="./index.html" class="logo header__logo" lang="en">
             <span class="logo__first-word">Web</span
             ><span class="logo__second-word">Studio</span>
           </a>
-      
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a
@@ -70,18 +72,80 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="menu-open-button" data-menu-open>
+          <svg class="menu-open-button__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+
+        <!-- MOBILE MENU -->
+        <div class="menu-container is-hidden" data-menu>
+          <button class="menu-toggle" data-menu-close>
+            <svg class="menu-toggle__cross-icon" width="40" height="40">
+              <use
+                class="icon-cross"
+                href="./images/icons.svg#icon-close_40px"
+              ></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a
+                href="./index.html"
+                class="mobile-menu__link mobile-menu__link--current"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__link-tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mainto:info@devstudio.com" class="mobile-contacts__link">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-soc-links">
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link"></a> Instagram
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link"></a> Twitter
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link"></a> Facebook
+            </li>
+            <li class="mobile-soc-links_item">
+              <a href="" class="mobile-soc-links_link"></a> LinkedIn
+            </li>
+          </ul>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <main class="main">
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="hero__btn" data-modal-open>
             Замовити послугу
           </button>
         </div>
-      </section> -->
+      </section>
 
       <section class="features section">
         <div class="container">
@@ -138,9 +202,9 @@
         </div>
       </section>
 
-      <!-- <section class="gallery section">
+      <section class="gallery section">
         <div class="container">
-          <h2 class="gallery__title title">Чим ми займаємося</h2>
+          <h2 class="gallery__title">Чим ми займаємося</h2>
           <ul class="gallery-list">
             <li>
               <div class="gallery-list__thumb-image">
@@ -178,7 +242,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- TEAM -->
       <section class="team section">
         <div class="container">
@@ -718,6 +782,9 @@
         </div>
       </div>
     </footer> -->
-    <!-- <script src="./js/modal.js"></script> -->
+
+    <script src="./js/modal.js"></script>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

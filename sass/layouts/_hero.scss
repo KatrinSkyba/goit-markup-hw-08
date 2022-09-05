@@ -1,36 +1,78 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  max-width: 767px;
   margin-left: auto;
   margin-right: auto;
-  padding: 200px 0;
-  text-align: center;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero-background.jpg);
+  background-image: $hero-background-gradient,
+    url(../images/hero-background-mobile.jpg);
+  @include retina {
+    background-image: $hero-background-gradient,
+      url(../images/hero-background-mobile-2x.jpg);
+  }
   background-color: $hero-background-color;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include tablet {
+    min-width: 768px;
+    background-image: $hero-background-gradient,
+      url(../images/hero-background-tablet.jpg);
+  }
+  @include retina {
+    background-image: $hero-background-gradient,
+      url(../images/hero-background-tablet-2x.jpg);
+    background-color: $hero-background-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    height: 600px;
+    background-image: $hero-background-gradient,
+      url(../images/hero-background.jpg);
+  }
+  @include retina {
+    background-image: $hero-background-gradient,
+      url(../images/hero-background-2x.jpg);
+    background-color: $hero-background-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
+  padding-top: 118px 60px 198px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 22px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $third-text-color;
+  text-align: center;
+
+  @include mobile {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero__btn {
   @extend %button;
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -38,6 +80,10 @@
   color: $third-text-color;
   background-color: $accent-color;
   box-shadow: $box-button-shadow;
+
+  @include desktop {
+    padding: 10px 32px;
+  }
 
   @extend %transition;
   &:hover,

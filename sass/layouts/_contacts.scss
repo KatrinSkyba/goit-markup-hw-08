@@ -1,16 +1,29 @@
 .contacts {
-  @include centeredFlex(flex, center, center);
+  display: none;
   @extend %list;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @include desktop {
+    @include centeredFlex(flex, center, center);
+  }
 }
 .header-contacts {
-  margin-left: auto;
+  margin-left: 96px;
 }
 
 .contacts__link {
   @include centeredFlex(flex, center, center);
   @extend %link;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -25,7 +38,9 @@
 }
 
 .contacts__item:not(:first-child) {
-  margin-left: 50px;
+  @include desktop {
+    margin-left: 50px;
+  }
 }
 
 .contacts__icon {
