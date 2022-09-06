@@ -2,27 +2,36 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-color;
+  display: flex;
   &__container {
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+
+.footer__contacts-set {
+  @include tablet {
     display: flex;
+    justify-content: space-around;
     align-items: baseline;
   }
 }
 
 .footer__thumb {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+  @include desktop {
+    margin-right: 70px;
+  }
 }
 
 .adress__list {
   @extend %list;
 }
 
-.adress__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
 .adress__link {
-  display: block;
-  margin-bottom: 9px;
   @extend %link;
   line-height: 1.71;
   color: $additional-color;
@@ -35,6 +44,16 @@
     color: $background-color;
   }
 }
+.adress__item:not(:last-child) {
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
+}
+
+.socials {
+  text-align: center;
+}
 
 .socials__title {
   margin-bottom: 20px;
@@ -44,11 +63,14 @@
   text-transform: uppercase;
   color: $background-color;
 }
+
 .socials__list {
-  display: flex;
+  @include centeredFlex(flex, center, center);
   gap: 10px;
+  margin-bottom: 60px;
   @extend %list;
 }
+
 .socials__link {
   @include centeredFlex(flex, center, center);
   @extend %link;
