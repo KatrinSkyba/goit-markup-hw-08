@@ -1,8 +1,19 @@
 .portfolio__list {
-  @include centeredFlex(flex, center, center);
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 40px;
   @extend %list;
+  @include tablet {
+    @include centeredFlex(flex, center, center);
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    @include centeredFlex(flex, center, center);
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-btn {

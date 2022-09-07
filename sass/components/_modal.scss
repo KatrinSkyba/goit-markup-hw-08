@@ -149,16 +149,23 @@
   }
 }
 
+.custom-check-box {
+  @include centeredFlex(flex, center, center);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 .form-check {
   position: relative;
+  display: flex;
+  align-items: center;
   @include centeredFlex(flex, center, center);
 
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
 
   color: $secondary-text-color;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+  cursor: pointer;
   @include desktop {
     font-size: 14px;
     line-height: 1.71;
@@ -176,9 +183,13 @@
 
 .form-square-icon {
   position: absolute;
-  display: flex;
+  left: 0;
   top: -5px;
-  left: 26px;
+  @include desktop {
+    top: 0;
+  }
+  @include centeredFlex(flex, center, center);
+  margin-right: 8px;
   transform: translate(-25px, 4px);
   width: 16px;
   height: 15px;
