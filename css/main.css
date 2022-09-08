@@ -302,7 +302,6 @@ address {
   justify-content: center;
   font-size: 12px;
   line-height: 1.17;
-  color: #757575;
   cursor: pointer;
 }
 @media screen and (min-width: 1200px) {
