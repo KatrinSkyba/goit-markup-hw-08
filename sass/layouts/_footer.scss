@@ -21,9 +21,9 @@
 
 .footer__thumb {
   text-align: center;
-  margin-bottom: 60px;
   @include desktop {
     margin-right: 70px;
+    text-align: start;
   }
 }
 
@@ -53,6 +53,9 @@
 
 .socials {
   text-align: center;
+  @include desktop {
+    text-align: start;
+  }
 }
 
 .socials__title {
