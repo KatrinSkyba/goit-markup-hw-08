@@ -665,7 +665,7 @@ address {
 .contacts__link {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.17;
@@ -1119,6 +1119,11 @@ address {
   text-transform: uppercase;
   color: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .socials__title {
+    margin-top: 60px;
+  }
+}
 
 .socials__list {
   display: flex;
@@ -1158,6 +1163,11 @@ address {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .sign-up .sign-up__title {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1220,8 +1230,8 @@ address {
 
 .submit-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   padding: 10px 10px 10px 28px;
@@ -1310,8 +1320,13 @@ address {
     width: 354px;
   }
 }
-
 @media screen and (min-width: 1200px) {
+  .portfolio-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .portfolio-item:not(:last-child) {
     margin-bottom: 30px;
   }

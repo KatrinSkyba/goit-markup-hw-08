@@ -59,6 +59,9 @@
 }
 
 .socials__title {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
   margin-bottom: 20px;
   font-weight: 700;
   font-size: $main-font-size;

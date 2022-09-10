@@ -11,6 +11,9 @@
     text-transform: uppercase;
     color: $background-color;
     margin-bottom: 20px;
+    @include tablet {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -52,7 +55,9 @@
 }
 
 .submit-button {
-  @include centeredFlex(flex, center, center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   padding: 10px 10px 10px 28px;
